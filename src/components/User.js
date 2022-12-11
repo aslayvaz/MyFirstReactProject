@@ -7,10 +7,17 @@ class User extends Component {
     salary : "Bilgi Yok",
     department : "Bilgi Yok"
   }
+  constructor(props){
+    super(props);
+    this.state ={
+      isVisible: false
+    }
+  }
 
   render() {
     //Destructuring 
     const {name, department, salary} = this.props;
+    const {isVisible} = this.state;
     return (
       <div className='col-md-8 mb-4'>
         <div className='card'>
@@ -18,10 +25,15 @@ class User extends Component {
             <h4 className='d-inline'>{name}</h4>
             <i className="fa-regular fa-trash-can"></i>
           </div>
-          <div className="card-body">
-            <p className="card-text">Maaş: {salary}</p>
-            <p className="card-text">Departman: {department}</p>
-          </div>
+          {
+            isVisible ? 
+            <div className="card-body">
+              <p className="card-text">Maaş: {salary}</p>
+              <p className="card-text">Departman: {department}</p>
+            </div>
+            : null
+          }
+          
         </div>        
       </div>
     )
