@@ -4,10 +4,11 @@ class User extends Component {
   render() {
     return (
       <div>
-        <form>
-            <input type="text"/>
-            <button>Gönder</button>
-        </form>        
+        <ul>
+          <li>İsim: Aslihan Ayvaz</li>
+          <li>Departman: Bilişim</li>
+          <li>Maaş: 5000</li>
+        </ul>       
       </div>
     )
   }
