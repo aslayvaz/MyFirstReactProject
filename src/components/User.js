@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class User extends Component {
   render() {
-    //Destructing 
+    //Destructuring 
     const {name, department, salary} = this.props;
     return (
       <div>
