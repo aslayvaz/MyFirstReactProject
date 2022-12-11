@@ -5,7 +5,7 @@ import User from './components/User';
 function App() {
   return (
     <div className="container">
-      <Navbar title="User App"/>
+      <Navbar/>
       <hr/>
       <User 
       name = "Aslihan Ayvaz"
@@ -14,7 +14,6 @@ function App() {
       />
       <User 
       name = "Tuncer Ayvaz"
-      salary = "15000"
       department = "Bilişim"
       />
       
