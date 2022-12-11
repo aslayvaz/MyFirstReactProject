@@ -2,17 +2,20 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
 class User extends Component {
+  state ={
+    isVisible: false
+  }
   static defaultProps = {
     name : "Bilgi Yok",
     salary : "Bilgi Yok",
     department : "Bilgi Yok"
   }
-  constructor(props){
-    super(props);
-    this.state ={
-      isVisible: false
-    }
-  }
+  // constructor(props){
+  //   super(props);
+  //   this.state ={
+  //     isVisible: false
+  //   }
+  // }
 
   render() {
     //Destructuring 
