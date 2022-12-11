@@ -7,7 +7,17 @@ function App() {
     <div className="container">
       <Navbar title="User App"/>
       <hr/>
-      <User/>
+      <User 
+      name = "Aslihan Ayvaz"
+      salary = "5000"
+      department = "Bilişim"
+      />
+      <User 
+      name = "Tuncer Ayvaz"
+      salary = "15000"
+      department = "Bilişim"
+      />
+      
     </div>
   );
 }
