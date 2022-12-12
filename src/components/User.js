@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
 class User extends Component {
-  state ={
+  state = {
     isVisible: false
   }
   static defaultProps = {
-    name : "Bilgi Yok",
-    salary : "Bilgi Yok",
-    department : "Bilgi Yok"
+    name: "Bilgi Yok",
+    salary: "Bilgi Yok",
+    department: "Bilgi Yok"
   }
   // constructor(props){
   //   super(props);
@@ -16,36 +16,49 @@ class User extends Component {
   //     isVisible: false
   //   }
   // }
+  //constructor(props) {
+  //  super(props)
+  //  this.onClickEvent = this.onClickEvent.bind(this);
+  //}
+  //onClickEvent(e) {
+    //Undefined
+    //console.log(this);
+  //  console.log(this);
+  //}
+
+  onClickEvent = (number,e) =>{
+    console.log(number);
+  }
 
   render() {
     //Destructuring 
-    const {name, department, salary} = this.props;
-    const {isVisible} = this.state;
+    const { name, department, salary } = this.props;
+    const { isVisible } = this.state;
     return (
       <div className='col-md-8 mb-4'>
         <div className='card'>
           <div className='card-header d-flex justify-content-between'>
-            <h4 className='d-inline'>{name}</h4>
+            <h4 className='d-inline' onClick={this.onClickEvent.bind(this,34)}>{name}</h4>
             <i className="fa-regular fa-trash-can"></i>
           </div>
           {
-            isVisible ? 
-            <div className="card-body">
-              <p className="card-text">Maaş: {salary}</p>
-              <p className="card-text">Departman: {department}</p>
-            </div>
-            : null
+            isVisible ?
+              <div className="card-body">
+                <p className="card-text">Maaş: {salary}</p>
+                <p className="card-text">Departman: {department}</p>
+              </div>
+              : null
           }
-          
-        </div>        
+
+        </div>
       </div>
     )
   }
 }
 User.propTypes = {
   name: PropTypes.string.isRequired,
-  salary : PropTypes.string.isRequired,
-  department : PropTypes.string.isRequired
+  salary: PropTypes.string.isRequired,
+  department: PropTypes.string.isRequired
 }
 
 export default User;
